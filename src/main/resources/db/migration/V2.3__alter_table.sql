@@ -1,0 +1,1 @@
+ALTER TABLE fav_chord_progression RENAME COLUMN createdat TO created_at;
