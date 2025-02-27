@@ -4,6 +4,6 @@ COPY . .
 RUN gradle clean build -x test
 
 FROM eclipse-temurin:21-alpine
-COPY --from=build /app/build/libs/dchordapp-0.0.1-SNAPSHOT.jar dchordapp.jar
+COPY --from=build /app/build/libs/back-0.0.1-SNAPSHOT.jar back.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "dchordapp.jar", "--spring.profiles.active=prod", "--debug"]
+ENTRYPOINT ["java", "-jar", "back.jar", "--spring.profiles.active=prod", "--debug"]
