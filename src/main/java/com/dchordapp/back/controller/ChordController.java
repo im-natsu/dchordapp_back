@@ -3,6 +3,7 @@ package com.dchordapp.back.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,6 +23,7 @@ import lombok.AllArgsConstructor;
 @RestController
 @RequestMapping("/api")
 @AllArgsConstructor
+@CrossOrigin(origins = "https://dchordapp-front-1.onrender.com")
 public class ChordController{
  
   //private final DiatonicChordRepository diatonicChordRepository;
